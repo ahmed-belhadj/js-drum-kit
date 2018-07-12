@@ -8,6 +8,10 @@ window.addEventListener("keydown", function(event) {
   }
   audio.currentTime = 0;
   audio.play();
-  //   this.console.log(key);
   key.classList.add("playing");
 });
+
+function removeTransition(event) {}
+
+const keys = document.querySelectorAll(".key");
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));
